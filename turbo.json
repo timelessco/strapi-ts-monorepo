@@ -1,0 +1,36 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"pipeline": {
+		"build:strapi": {
+			"dependsOn": ["lint:eslint", "lint:types"]
+		},
+		"test": {},
+		"lint:eslint": {
+			"outputs": [".eslintcache"]
+		},
+		"lint:types": {},
+		"lint:md": {
+			"inputs": ["**/*.md", ".github/**/*.md"]
+		},
+		"lint:knip": {
+			"inputs": ["src/**/*.{ts,tsx}"]
+		},
+		"lint:package-json": {
+			"inputs": ["package.json"]
+		},
+		"lint:prettier": {
+			"outputs": [".prettiercache"]
+		},
+		"lint:spelling": {},
+		"format:eslint": {
+			"outputs": [".eslintcache"]
+		},
+		"format:md": {
+			"inputs": ["**/*.md", ".github/**/*.md"]
+		},
+		"format:prettier": {
+			"dependsOn": ["format:eslint", "format:md"],
+			"outputs": [".prettiercache"]
+		}
+	}
+}

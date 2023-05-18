@@ -1,57 +1,76 @@
-# 🚀 Getting started with Strapi
+<h1 align="center">Strapi TS App</h1>
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+<p align="center">Strapi TS App Template</p>
 
-### `develop`
+<p align="center">
+	<a href="#contributors" target="_blank">
+<!-- prettier-ignore-start -->
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+<img alt="All Contributors: 2" src="https://img.shields.io/badge/all_contributors-2-21bb42.svg" />
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+<!-- prettier-ignore-end -->
+	</a>
+	<a href="https://github.com/timelessco/strapi-ts-app/blob/main/.github/CODE_OF_CONDUCT.md" target="_blank">
+		<img alt="Contributor Covenant" src="https://img.shields.io/badge/code_of_conduct-enforced-21bb42" />
+	</a>
+	<a href="https://github.com/timelessco/strapi-ts-app/blob/main/LICENSE.md" target="_blank">
+		<img alt="License: MIT" src="https://img.shields.io/github/license/timelessco/strapi-ts-app?color=21bb42">
+	</a>
+	<img alt="Style: Prettier" src="https://img.shields.io/badge/style-prettier-21bb42.svg" />
+	<img alt="TypeScript: Strict" src="https://img.shields.io/badge/typescript-strict-21bb42.svg" />
+</p>
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
+## Introduction
 
-```
-npm run develop
-# or
-yarn develop
-```
+Strapi comes with a full featured
+[Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html)
+(CLI) which lets you scaffold and manage your project in seconds.
 
-### `start`
+- [strapi](https://strapi.io/)
+- [pg](https://www.postgresql.org/)
+- [typeScript](https://www.typescriptlang.org/)
+- [yarn](https://yarnpkg.com/)
+- [eslint](https://eslint.org/)
+- [prettier](https://prettier.io/)
+- [markdownlint](https://github.com/DavidAnson/markdownlint)
+- [knip](https://github.com/webpro/knip)
+- [cspell](https://cspell.org)
+- [npm-package-json-lint](https://npmpackagejsonlint.org/)
+- [release-it](https://github.com/release-it/release-it#readme)
+- [husky](https://typicode.github.io/husky/#/)
+- [lint-staged](https://github.com/okonet/lint-staged#readme)
+- [commitlint](https://commitlint.js.org/#/)
+- [gacp](https://github.com/vivaxy/gacp#readme)
+- [all-contributors](https://github.com/all-contributors/all-contributors)
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
+## Development
 
-```
-npm run start
-# or
-yarn start
-```
+See [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md), then
+[`.github/DEVELOPMENT.md`](./.github/DEVELOPMENT.md). Thanks! 💖
 
-### `build`
+## Contributors
 
-Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
+<!-- spellchecker: disable -->
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://navinmoorthy.me/"><img src="https://avatars.githubusercontent.com/u/39694575?v=4?s=100" width="100px;" alt="Navin Moorthy"/><br /><sub><b>Navin Moorthy</b></sub></a><br /><a href="https://github.com/timelessco/strapi-ts-app/commits?author=navin-moorthy" title="Code">💻</a> <a href="#a11y-navin-moorthy" title="Accessibility">️️️️♿️</a> <a href="https://github.com/timelessco/strapi-ts-app/commits?author=navin-moorthy" title="Documentation">📖</a> <a href="#design-navin-moorthy" title="Design">🎨</a> <a href="#ideas-navin-moorthy" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-navin-moorthy" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.joshuakgoldberg.com"><img src="https://avatars.githubusercontent.com/u/3335181?v=4?s=100" width="100px;" alt="Josh Goldberg"/><br /><sub><b>Josh Goldberg</b></sub></a><br /><a href="#tool-JoshuaKGoldberg" title="Tools">🔧</a></td>
+    </tr>
+  </tbody>
+</table>
 
-```
-npm run build
-# or
-yarn build
-```
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
 
-## ⚙️ Deployment
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+<!-- spellchecker: enable -->
 
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
+<!-- You can remove this notice if you don't want it 🙂 no worries! -->
 
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+> 💙 This package is based on
+> [@JoshuaKGoldberg](https://github.com/JoshuaKGoldberg)'s
+> [template-typescript-node-package](https://github.com/JoshuaKGoldberg/template-typescript-node-package).

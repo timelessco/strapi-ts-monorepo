@@ -1,29 +1,133 @@
 {
-  "name": "strapi-ts-uno",
-  "private": true,
-  "version": "0.0.0",
-  "description": "A Strapi application",
-  "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
-  },
-  "devDependencies": {},
-  "dependencies": {
-    "@strapi/strapi": "4.10.5",
-    "@strapi/plugin-i18n": "4.10.5",
-    "pg": "^8.10.0"
-  },
-  "author": {
-    "name": "A Strapi developer"
-  },
-  "strapi": {
-    "uuid": "33adfe6d-0f72-4d99-bc3d-66df971e14ef"
-  },
-  "engines": {
-    "node": ">=14.19.1 <=18.x.x",
-    "npm": ">=6.0.0"
-  },
-  "license": "MIT"
+	"name": "strapi-ts-app",
+	"version": "2.0.2",
+	"private": true,
+	"description": "Strapi TS App Template",
+	"keywords": [
+		"ts",
+		"app",
+		"production",
+		"template",
+		"strapi"
+	],
+	"bugs": {
+		"url": "https://github.com/timelessco/strapi-ts-app/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/timelessco/strapi-ts-app.git"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Timeless",
+		"email": "hello@timeless.co",
+		"url": "https://timeless.co/"
+	},
+	"scripts": {
+		"build": "npx turbo run build:tsup",
+		"build:strapi": "strapi build",
+		"commit": "gacp",
+		"contributors:add": "all-contributors add",
+		"contributors:generate": "all-contributors generate",
+		"dev": "strapi develop",
+		"format": "npx turbo run format:eslint format:md format:prettier",
+		"format:eslint": "eslint --cache --report-unused-disable-directives --color . --fix",
+		"format:md": "markdownlint --fix **/*.md \".github/**/*.md\"",
+		"format:prettier": "prettier --write --cache --cache-location=.prettiercache --list-different --ignore-unknown .",
+		"lint": "npx turbo run lint:eslint lint:types lint:md lint:knip lint:package-json lint:spelling lint:prettier",
+		"lint:eslint": "eslint --cache --report-unused-disable-directives --color .",
+		"lint:knip": "knip --production",
+		"lint:md": "markdownlint **/*.md \".github/**/*.md\"",
+		"lint:package-json": "npmPkgJsonLint .",
+		"lint:prettier": "prettier . --check --cache --cache-location=.prettiercache --ignore-unknown",
+		"lint:spelling": "cspell --dot --gitignore --cache --no-progress check \"**/*\"",
+		"lint:types": "tsc --noEmit",
+		"populate:dictionary": "del-cli project-words.txt && cspell --words-only --unique --gitignore --cache --dot \"**/*\" | sort --ignore-case >> project-words.txt",
+		"prepare": "husky install",
+		"release": "node release-it/getCommitsSinceLastRelease.js && release-it --ci",
+		"release:dryrun": "release-it --dry-run",
+		"start": "strapi start",
+		"strapi": "strapi",
+		"test": "echo \"no test specified\" && exit 0"
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+	"lint-staged": {
+		"*": [
+			"pnpm format:prettier",
+			"pnpm lint:spelling"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"dependencies": {
+		"@strapi/plugin-i18n": "4.10.5",
+		"@strapi/strapi": "4.10.5",
+		"pg": "8.11.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "17.6.3",
+		"@commitlint/config-conventional": "17.6.3",
+		"@ianvs/prettier-plugin-sort-imports": "3.7.2",
+		"@octokit/core": "4.2.1",
+		"@release-it/conventional-changelog": "5.1.1",
+		"@types/node": "20.2.1",
+		"@typescript-eslint/experimental-utils": "5.59.6",
+		"all-contributors-cli": "6.25.1",
+		"cspell": "6.31.1",
+		"dedent": "0.7.0",
+		"del-cli": "5.0.0",
+		"dotenv": "16.0.3",
+		"eslint": "8.40.0",
+		"eslint-config-canonical": "41.0.4",
+		"eslint-config-prettier": "8.8.0",
+		"eslint-plugin-jsonc": "2.8.0",
+		"eslint-plugin-toml": "0.5.0",
+		"eslint-plugin-yml": "1.7.0",
+		"execa": "7.1.1",
+		"gacp": "3.0.3",
+		"git-remote-origin-url": "4.0.0",
+		"git-url-parse": "13.1.0",
+		"husky": "8.0.3",
+		"jsonc-eslint-parser": "2.3.0",
+		"knip": "2.11.0",
+		"lint-staged": "13.2.2",
+		"markdownlint": "0.28.2",
+		"markdownlint-cli": "0.34.0",
+		"npm-package-json-lint": "6.4.0",
+		"npm-package-json-lint-config-default": "5.0.0",
+		"prettier": "2.8.8",
+		"prettier-plugin-packagejson": "2.4.3",
+		"release-it": "15.10.3",
+		"toml-eslint-parser": "0.6.0",
+		"turbo": "1.9.8",
+		"typescript": "5.0.4",
+		"yaml-eslint-parser": "1.2.2"
+	},
+	"engines": {
+		"node": ">=14.19.1 <=18.x.x",
+		"npm": ">=6.0.0"
+	},
+	"gacp": {
+		"add": false,
+		"push": false,
+		"emoji": "emoji",
+		"editor": false
+	},
+	"strapi": {
+		"uuid": "33adfe6d-0f72-4d99-bc3d-66df971e14ef"
+	}
 }

@@ -1,3 +1,3 @@
 export default () => ({
-  autogenerate: true
-})
+	autogenerate: true,
+});
