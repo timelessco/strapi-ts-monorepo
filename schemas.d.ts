@@ -14,10 +14,10 @@ import {
   BooleanAttribute,
   EnumerationAttribute,
   BigIntegerAttribute,
-  SingleTypeSchema,
   IntegerAttribute,
   DecimalAttribute,
   SetMinMax,
+  SingleTypeSchema,
 } from '@strapi/strapi';
 
 export interface AdminPermission extends CollectionTypeSchema {
@@ -372,36 +372,6 @@ export interface AdminTransferTokenPermission extends CollectionTypeSchema {
   };
 }
 
-export interface ApiFooterFooter extends SingleTypeSchema {
-  info: {
-    singularName: 'footer';
-    pluralName: 'footers';
-    displayName: 'Footer';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    githubUrl: StringAttribute;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    publishedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::footer.footer',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::footer.footer',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
 export interface PluginUploadFile extends CollectionTypeSchema {
   info: {
     singularName: 'file';
@@ -563,6 +533,36 @@ export interface PluginI18NLocale extends CollectionTypeSchema {
   };
 }
 
+export interface ApiFooterFooter extends SingleTypeSchema {
+  info: {
+    singularName: 'footer';
+    pluralName: 'footers';
+    displayName: 'Footer';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    githubUrl: StringAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    publishedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 declare global {
   namespace Strapi {
     interface Schemas {
@@ -573,10 +573,10 @@ declare global {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::footer.footer': ApiFooterFooter;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::footer.footer': ApiFooterFooter;
     }
   }
 }
