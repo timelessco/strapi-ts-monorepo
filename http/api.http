@@ -1,0 +1,9 @@
+@hostname = http://{{$dotenv HOST}}
+@port = {{$dotenv PORT}}
+@baseURL = {{hostname}}:{{port}}
+
+###
+# Get the footer contents
+
+GET {{baseURL}}/api/footer
+Authorization: Bearer {{$dotenv API_TOKEN}}
