@@ -6,7 +6,7 @@ inputs:
   node-version:
     required: false
     description: "`node-version` passed to `actions/setup-node`."
-    default: latest
+    default: "18"
 
 runs:
   using: composite
