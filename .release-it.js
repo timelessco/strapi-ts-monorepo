@@ -34,6 +34,7 @@ module.exports = {
 		"@release-it/conventional-changelog": {
 			preset: { name: "conventionalcommits" },
 			infile: "CHANGELOG.md",
+			ignoreRecommendedBump: true,
 			gitRawCommitsOpts: {
 				format:
 					"%B%n-hash-%n%H%n-shortHash-%n%h%n-gitTags-%n%d%n-committerDate-%n%ci%n-authorName-%n%an%n-authorEmail-%n%ae%n-gpgStatus-%n%G?%n-gpgSigner-%n%GS",
