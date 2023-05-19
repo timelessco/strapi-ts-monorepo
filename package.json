@@ -1,6 +1,6 @@
 {
 	"name": "strapi-ts-app",
-	"version": "2.0.2",
+	"version": "0.0.0",
 	"private": true,
 	"description": "Strapi TS App Template",
 	"keywords": [
