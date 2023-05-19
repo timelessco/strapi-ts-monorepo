@@ -44,7 +44,7 @@
 		"lint:types": "tsc --noEmit",
 		"populate:dictionary": "del-cli project-words.txt && cspell --words-only --unique --gitignore --cache --dot \"**/*\" | sort --ignore-case >> project-words.txt",
 		"prepare": "husky install",
-		"release": "node release-it/getCommitsSinceLastRelease.js && release-it --ci",
+		"release": "node release-it/getCommitsSinceLastRelease.mjs && release-it --ci",
 		"release:dryrun": "release-it --dry-run",
 		"start": "strapi start",
 		"strapi": "strapi",
