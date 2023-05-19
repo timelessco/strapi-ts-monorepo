@@ -1,5 +1,21 @@
 
 
+## [1.0.1](https://github.com/timelessco/strapi-ts-app/compare/v1.0.0...v1.0.1) (2023-05-19)
+
+
+### 🗃️ Commits
+
+
+#### 🔨 Maintenance Updates
+
+- **`package:`** 🧹 update version to 1.0.0 [b12fa5f](https://github.com/timelessco/strapi-ts-app/commit/b12fa5f07d5cdb41eefabd18e55933c1376e5096) by @navin-moorthy
+
+
+
+#### 💚 CI Changes
+
+- **`release:`** 🤖 enable CI mode for release-it [2e55baf](https://github.com/timelessco/strapi-ts-app/commit/2e55baf9936920d3b59b18ab0794b40a0bcbc6ad) by @navin-moorthy
+
 ## [1.0.0](https://github.com/timelessco/strapi-ts-app/compare/v0.0.0...v1.0.0) (2023-05-19)
 
 
