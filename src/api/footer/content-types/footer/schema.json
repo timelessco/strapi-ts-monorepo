@@ -12,8 +12,11 @@
 	},
 	"pluginOptions": {},
 	"attributes": {
-		"githubUrl": {
-			"type": "string"
+		"links": {
+			"type": "component",
+			"repeatable": true,
+			"component": "website.link",
+			"required": false
 		}
 	}
 }
