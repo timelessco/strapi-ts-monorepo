@@ -9,7 +9,7 @@
 		"url": {
 			"type": "string",
 			"required": true,
-			"regex": "/https?:\\/\\/(?:www\\.|(?!www))[^\\s.]+\\.[^\\s]{2,}/gm"
+			"regex": "https?:\\/\\/(?:www\\.|(?!www))[^\\s.]+\\.[^\\s]{2,}"
 		},
 		"label": {
 			"type": "string",

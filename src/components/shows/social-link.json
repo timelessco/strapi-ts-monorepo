@@ -1,0 +1,26 @@
+{
+	"collectionName": "components_shows_social_links",
+	"info": {
+		"displayName": "Social Link",
+		"description": ""
+	},
+	"options": {},
+	"attributes": {
+		"type": {
+			"type": "enumeration",
+			"enum": [
+				"Facebook",
+				"Twitter",
+				"Instagram",
+				"LinkedIn",
+				"YouTube",
+				"Vimeo",
+				"Others"
+			]
+		},
+		"url": {
+			"type": "string",
+			"regex": "https?:\\/\\/(?:www\\.|(?!www))[^\\s.]+\\.[^\\s]{2,}"
+		}
+	}
+}

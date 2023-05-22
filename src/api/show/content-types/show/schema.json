@@ -1,0 +1,80 @@
+{
+	"kind": "collectionType",
+	"collectionName": "shows",
+	"info": {
+		"singularName": "show",
+		"pluralName": "shows",
+		"displayName": "Shows",
+		"description": ""
+	},
+	"options": {
+		"draftAndPublish": true
+	},
+	"pluginOptions": {},
+	"attributes": {
+		"key": {
+			"type": "string",
+			"required": true,
+			"unique": true
+		},
+		"name": {
+			"type": "string",
+			"required": true
+		},
+		"sync": {
+			"type": "boolean",
+			"default": false,
+			"required": true
+		},
+		"releaseYear": {
+			"type": "integer"
+		},
+		"episodic": {
+			"type": "boolean",
+			"default": false
+		},
+		"poster": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shows.image"
+		},
+		"banner": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shows.image"
+		},
+		"description": {
+			"type": "text"
+		},
+		"htmlDescription": {
+			"type": "richtext"
+		},
+		"genres": {
+			"type": "relation",
+			"relation": "manyToMany",
+			"target": "api::genre.genre",
+			"mappedBy": "shows"
+		},
+		"castAndCrew": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shows.cast-and-crew"
+		},
+		"accolade": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shows.accolade"
+		},
+		"socialLink": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shows.social-link"
+		},
+		"episodes": {
+			"type": "relation",
+			"relation": "oneToMany",
+			"target": "api::episode.episode",
+			"mappedBy": "show"
+		}
+	}
+}

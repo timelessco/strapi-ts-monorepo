@@ -1,0 +1,15 @@
+{
+	"collectionName": "components_shows_accolades",
+	"info": {
+		"displayName": "Accolade"
+	},
+	"options": {},
+	"attributes": {
+		"quote": {
+			"type": "text"
+		},
+		"person": {
+			"type": "string"
+		}
+	}
+}

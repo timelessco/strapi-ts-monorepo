@@ -1,0 +1,28 @@
+{
+	"kind": "singleType",
+	"collectionName": "brandings",
+	"info": {
+		"singularName": "branding",
+		"pluralName": "brandings",
+		"displayName": "Branding",
+		"description": ""
+	},
+	"options": {
+		"draftAndPublish": true
+	},
+	"pluginOptions": {},
+	"attributes": {
+		"websiteLogo": {
+			"allowedTypes": ["images"],
+			"type": "media",
+			"multiple": false,
+			"required": true
+		},
+		"watchPageLogo": {
+			"allowedTypes": ["images"],
+			"type": "media",
+			"multiple": false,
+			"required": true
+		}
+	}
+}
