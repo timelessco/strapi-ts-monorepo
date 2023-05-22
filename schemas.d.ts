@@ -11,14 +11,17 @@ import {
 	EnumerationAttribute,
 	IntegerAttribute,
 	JSONAttribute,
+	MediaAttribute,
 	PasswordAttribute,
 	PrivateAttribute,
 	RelationAttribute,
 	RequiredAttribute,
+	RichTextAttribute,
 	SetMinMax,
 	SetMinMaxLength,
 	SingleTypeSchema,
 	StringAttribute,
+	TextAttribute,
 	UniqueAttribute,
 } from "@strapi/strapi";
 
@@ -374,36 +377,6 @@ export interface AdminTransferTokenPermission extends CollectionTypeSchema {
 	};
 }
 
-export interface ApiFooterFooter extends SingleTypeSchema {
-	info: {
-		singularName: "footer";
-		pluralName: "footers";
-		displayName: "Footer";
-		description: "";
-	};
-	options: {
-		draftAndPublish: true;
-	};
-	attributes: {
-		links: ComponentAttribute<"website.link", true>;
-		createdAt: DateTimeAttribute;
-		updatedAt: DateTimeAttribute;
-		publishedAt: DateTimeAttribute;
-		createdBy: RelationAttribute<
-			"api::footer.footer",
-			"oneToOne",
-			"admin::user"
-		> &
-			PrivateAttribute;
-		updatedBy: RelationAttribute<
-			"api::footer.footer",
-			"oneToOne",
-			"admin::user"
-		> &
-			PrivateAttribute;
-	};
-}
-
 export interface PluginUploadFile extends CollectionTypeSchema {
 	info: {
 		singularName: "file";
@@ -565,6 +538,241 @@ export interface PluginI18NLocale extends CollectionTypeSchema {
 	};
 }
 
+export interface ApiBrandingBranding extends SingleTypeSchema {
+	info: {
+		singularName: "branding";
+		pluralName: "brandings";
+		displayName: "Branding";
+		description: "";
+	};
+	options: {
+		draftAndPublish: true;
+	};
+	attributes: {
+		websiteLogo: MediaAttribute & RequiredAttribute;
+		watchPageLogo: MediaAttribute & RequiredAttribute;
+		createdAt: DateTimeAttribute;
+		updatedAt: DateTimeAttribute;
+		publishedAt: DateTimeAttribute;
+		createdBy: RelationAttribute<
+			"api::branding.branding",
+			"oneToOne",
+			"admin::user"
+		> &
+			PrivateAttribute;
+		updatedBy: RelationAttribute<
+			"api::branding.branding",
+			"oneToOne",
+			"admin::user"
+		> &
+			PrivateAttribute;
+	};
+}
+
+export interface ApiEpisodeEpisode extends CollectionTypeSchema {
+	info: {
+		singularName: "episode";
+		pluralName: "episodes";
+		displayName: "Episodes";
+		description: "";
+	};
+	options: {
+		draftAndPublish: true;
+	};
+	attributes: {
+		key: StringAttribute & RequiredAttribute & UniqueAttribute;
+		name: StringAttribute;
+		description: TextAttribute;
+		season: IntegerAttribute;
+		episode: IntegerAttribute;
+		originalAirDate: StringAttribute;
+		banner: ComponentAttribute<"shows.image">;
+		show: RelationAttribute<
+			"api::episode.episode",
+			"manyToOne",
+			"api::show.show"
+		>;
+		createdAt: DateTimeAttribute;
+		updatedAt: DateTimeAttribute;
+		publishedAt: DateTimeAttribute;
+		createdBy: RelationAttribute<
+			"api::episode.episode",
+			"oneToOne",
+			"admin::user"
+		> &
+			PrivateAttribute;
+		updatedBy: RelationAttribute<
+			"api::episode.episode",
+			"oneToOne",
+			"admin::user"
+		> &
+			PrivateAttribute;
+	};
+}
+
+export interface ApiFooterFooter extends SingleTypeSchema {
+	info: {
+		singularName: "footer";
+		pluralName: "footers";
+		displayName: "Footer";
+		description: "";
+	};
+	options: {
+		draftAndPublish: true;
+	};
+	attributes: {
+		links: ComponentAttribute<"website.link", true>;
+		createdAt: DateTimeAttribute;
+		updatedAt: DateTimeAttribute;
+		publishedAt: DateTimeAttribute;
+		createdBy: RelationAttribute<
+			"api::footer.footer",
+			"oneToOne",
+			"admin::user"
+		> &
+			PrivateAttribute;
+		updatedBy: RelationAttribute<
+			"api::footer.footer",
+			"oneToOne",
+			"admin::user"
+		> &
+			PrivateAttribute;
+	};
+}
+
+export interface ApiGenreGenre extends CollectionTypeSchema {
+	info: {
+		singularName: "genre";
+		pluralName: "genres";
+		displayName: "Genres";
+		description: "";
+	};
+	options: {
+		draftAndPublish: true;
+	};
+	attributes: {
+		key: StringAttribute & RequiredAttribute & UniqueAttribute;
+		name: StringAttribute & RequiredAttribute;
+		shows: RelationAttribute<
+			"api::genre.genre",
+			"manyToMany",
+			"api::show.show"
+		>;
+		createdAt: DateTimeAttribute;
+		updatedAt: DateTimeAttribute;
+		publishedAt: DateTimeAttribute;
+		createdBy: RelationAttribute<
+			"api::genre.genre",
+			"oneToOne",
+			"admin::user"
+		> &
+			PrivateAttribute;
+		updatedBy: RelationAttribute<
+			"api::genre.genre",
+			"oneToOne",
+			"admin::user"
+		> &
+			PrivateAttribute;
+	};
+}
+
+export interface ApiShowShow extends CollectionTypeSchema {
+	info: {
+		singularName: "show";
+		pluralName: "shows";
+		displayName: "Shows";
+		description: "";
+	};
+	options: {
+		draftAndPublish: true;
+	};
+	attributes: {
+		key: StringAttribute & RequiredAttribute & UniqueAttribute;
+		name: StringAttribute & RequiredAttribute;
+		sync: BooleanAttribute & RequiredAttribute & DefaultTo<false>;
+		releaseYear: IntegerAttribute;
+		episodic: BooleanAttribute & DefaultTo<false>;
+		poster: ComponentAttribute<"shows.image">;
+		banner: ComponentAttribute<"shows.image">;
+		description: TextAttribute;
+		htmlDescription: RichTextAttribute;
+		genres: RelationAttribute<
+			"api::show.show",
+			"manyToMany",
+			"api::genre.genre"
+		>;
+		castAndCrew: ComponentAttribute<"shows.cast-and-crew", true>;
+		accolade: ComponentAttribute<"shows.accolade", true>;
+		socialLink: ComponentAttribute<"shows.social-link", true>;
+		episodes: RelationAttribute<
+			"api::show.show",
+			"oneToMany",
+			"api::episode.episode"
+		>;
+		createdAt: DateTimeAttribute;
+		updatedAt: DateTimeAttribute;
+		publishedAt: DateTimeAttribute;
+		createdBy: RelationAttribute<"api::show.show", "oneToOne", "admin::user"> &
+			PrivateAttribute;
+		updatedBy: RelationAttribute<"api::show.show", "oneToOne", "admin::user"> &
+			PrivateAttribute;
+	};
+}
+
+export interface ShowsAccolade extends ComponentSchema {
+	info: {
+		displayName: "Accolade";
+	};
+	attributes: {
+		quote: TextAttribute;
+		person: StringAttribute;
+	};
+}
+
+export interface ShowsCastAndCrew extends ComponentSchema {
+	info: {
+		displayName: "Cast and Crew";
+		description: "";
+	};
+	attributes: {
+		name: StringAttribute;
+		role: StringAttribute;
+	};
+}
+
+export interface ShowsImage extends ComponentSchema {
+	info: {
+		displayName: "Image";
+	};
+	attributes: {
+		url: StringAttribute;
+		blurhash: StringAttribute;
+		width: IntegerAttribute;
+		height: IntegerAttribute;
+	};
+}
+
+export interface ShowsSocialLink extends ComponentSchema {
+	info: {
+		displayName: "Social Link";
+		description: "";
+	};
+	attributes: {
+		type: EnumerationAttribute<
+			[
+				"Facebook",
+				"Twitter",
+				"Instagram",
+				"LinkedIn",
+				"YouTube",
+				"Vimeo",
+				"Others",
+			]
+		>;
+		url: StringAttribute;
+	};
+}
+
 export interface WebsiteLink extends ComponentSchema {
 	info: {
 		displayName: "Link";
@@ -589,10 +797,18 @@ declare global {
 			"admin::api-token-permission": AdminApiTokenPermission;
 			"admin::transfer-token": AdminTransferToken;
 			"admin::transfer-token-permission": AdminTransferTokenPermission;
-			"api::footer.footer": ApiFooterFooter;
 			"plugin::upload.file": PluginUploadFile;
 			"plugin::upload.folder": PluginUploadFolder;
 			"plugin::i18n.locale": PluginI18NLocale;
+			"api::branding.branding": ApiBrandingBranding;
+			"api::episode.episode": ApiEpisodeEpisode;
+			"api::footer.footer": ApiFooterFooter;
+			"api::genre.genre": ApiGenreGenre;
+			"api::show.show": ApiShowShow;
+			"shows.accolade": ShowsAccolade;
+			"shows.cast-and-crew": ShowsCastAndCrew;
+			"shows.image": ShowsImage;
+			"shows.social-link": ShowsSocialLink;
 			"website.link": WebsiteLink;
 		}
 	}

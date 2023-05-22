@@ -1,0 +1,21 @@
+{
+	"collectionName": "components_shows_images",
+	"info": {
+		"displayName": "Image"
+	},
+	"options": {},
+	"attributes": {
+		"url": {
+			"type": "string"
+		},
+		"blurhash": {
+			"type": "string"
+		},
+		"width": {
+			"type": "integer"
+		},
+		"height": {
+			"type": "integer"
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"collectionName": "components_shows_cast_and_crews",
+	"info": {
+		"displayName": "Cast and Crew",
+		"description": ""
+	},
+	"options": {},
+	"attributes": {
+		"name": {
+			"type": "string"
+		},
+		"role": {
+			"type": "string"
+		}
+	}
+}
