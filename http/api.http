@@ -5,5 +5,5 @@
 ###
 # Get the footer contents
 
-GET {{baseURL}}/api/footer
+GET {{baseURL}}/api/footer?populate=*
 Authorization: Bearer {{$dotenv API_TOKEN}}

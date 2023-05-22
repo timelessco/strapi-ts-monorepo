@@ -1,0 +1,25 @@
+{
+	"collectionName": "components_website_links",
+	"info": {
+		"displayName": "Link",
+		"description": ""
+	},
+	"options": {},
+	"attributes": {
+		"url": {
+			"type": "string",
+			"required": true,
+			"regex": "/https?:\\/\\/(?:www\\.|(?!www))[^\\s.]+\\.[^\\s]{2,}/gm"
+		},
+		"label": {
+			"type": "string",
+			"required": true
+		},
+		"target": {
+			"type": "enumeration",
+			"enum": ["New page", "Same page"],
+			"default": "New page",
+			"required": true
+		}
+	}
+}

@@ -2,6 +2,8 @@ import {
 	BigIntegerAttribute,
 	BooleanAttribute,
 	CollectionTypeSchema,
+	ComponentAttribute,
+	ComponentSchema,
 	DateTimeAttribute,
 	DecimalAttribute,
 	DefaultTo,
@@ -372,6 +374,36 @@ export interface AdminTransferTokenPermission extends CollectionTypeSchema {
 	};
 }
 
+export interface ApiFooterFooter extends SingleTypeSchema {
+	info: {
+		singularName: "footer";
+		pluralName: "footers";
+		displayName: "Footer";
+		description: "";
+	};
+	options: {
+		draftAndPublish: true;
+	};
+	attributes: {
+		links: ComponentAttribute<"website.link", true>;
+		createdAt: DateTimeAttribute;
+		updatedAt: DateTimeAttribute;
+		publishedAt: DateTimeAttribute;
+		createdBy: RelationAttribute<
+			"api::footer.footer",
+			"oneToOne",
+			"admin::user"
+		> &
+			PrivateAttribute;
+		updatedBy: RelationAttribute<
+			"api::footer.footer",
+			"oneToOne",
+			"admin::user"
+		> &
+			PrivateAttribute;
+	};
+}
+
 export interface PluginUploadFile extends CollectionTypeSchema {
 	info: {
 		singularName: "file";
@@ -533,33 +565,17 @@ export interface PluginI18NLocale extends CollectionTypeSchema {
 	};
 }
 
-export interface ApiFooterFooter extends SingleTypeSchema {
+export interface WebsiteLink extends ComponentSchema {
 	info: {
-		singularName: "footer";
-		pluralName: "footers";
-		displayName: "Footer";
+		displayName: "Link";
 		description: "";
 	};
-	options: {
-		draftAndPublish: true;
-	};
 	attributes: {
-		githubUrl: StringAttribute;
-		createdAt: DateTimeAttribute;
-		updatedAt: DateTimeAttribute;
-		publishedAt: DateTimeAttribute;
-		createdBy: RelationAttribute<
-			"api::footer.footer",
-			"oneToOne",
-			"admin::user"
-		> &
-			PrivateAttribute;
-		updatedBy: RelationAttribute<
-			"api::footer.footer",
-			"oneToOne",
-			"admin::user"
-		> &
-			PrivateAttribute;
+		url: StringAttribute & RequiredAttribute;
+		label: StringAttribute & RequiredAttribute;
+		target: EnumerationAttribute<["New page", "Same page"]> &
+			RequiredAttribute &
+			DefaultTo<"New page">;
 	};
 }
 
@@ -573,10 +589,11 @@ declare global {
 			"admin::api-token-permission": AdminApiTokenPermission;
 			"admin::transfer-token": AdminTransferToken;
 			"admin::transfer-token-permission": AdminTransferTokenPermission;
+			"api::footer.footer": ApiFooterFooter;
 			"plugin::upload.file": PluginUploadFile;
 			"plugin::upload.folder": PluginUploadFolder;
 			"plugin::i18n.locale": PluginI18NLocale;
-			"api::footer.footer": ApiFooterFooter;
+			"website.link": WebsiteLink;
 		}
 	}
 }
