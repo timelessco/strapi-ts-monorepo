@@ -24,12 +24,13 @@
 		"url": "https://timeless.co/"
 	},
 	"scripts": {
-		"build": "npx turbo run build:tsup",
+		"build": "npx turbo run build:strapi",
 		"build:strapi": "strapi build",
 		"commit": "gacp",
 		"contributors:add": "all-contributors add",
 		"contributors:generate": "all-contributors generate",
 		"dev": "strapi develop",
+		"dev:strapi-admin": "strapi develop --watch-admin",
 		"format": "npx turbo run format:eslint format:md format:prettier",
 		"format:eslint": "eslint --cache --report-unused-disable-directives --color . --fix",
 		"format:md": "markdownlint --fix **/*.md \".github/**/*.md\"",
