@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  pull_request: ~
+
+  push:
+    branches:
+      - main
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: 📥 Prepare package manager
+        uses: ./.github/actions/prepare
+
+      - name: 🧐 Lint root files
+        run:
+          turbo lint:prettier lint:eslint lint:types lint:md lint:knip
+          lint:package-json lint:spelling

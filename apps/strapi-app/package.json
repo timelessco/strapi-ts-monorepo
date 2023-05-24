@@ -1,6 +1,6 @@
 {
 	"name": "strapi-app",
-	"version": "1.0.1",
+	"version": "0.0.0",
 	"private": true,
 	"description": "Strapi App Template",
 	"keywords": [
@@ -73,19 +73,6 @@
 	"engines": {
 		"node": ">=14.19.1 <=18.x.x",
 		"npm": ">=6.0.0"
-	},
-	"release-it": {
-		"git": false,
-		"plugins": {
-			"@release-it/bumper": {
-				"out": {
-					"file": "package.json",
-					"path": [
-						"dependencies.strapi-plugin-uno"
-					]
-				}
-			}
-		}
 	},
 	"strapi": {
 		"uuid": "3823b7ff-5bf2-4b57-9357-62a0211cc9fe"
