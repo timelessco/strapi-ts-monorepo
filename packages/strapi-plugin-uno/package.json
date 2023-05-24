@@ -1,5 +1,5 @@
 {
-	"name": "strapi-plugin-sync-shows",
+	"name": "strapi-plugin-uno",
 	"version": "1.0.1",
 	"description": "This is the description of the plugin.",
 	"homepage": "https://github.com/timelessco/strapi-ts-app",
@@ -9,7 +9,7 @@
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/timelessco/strapi-ts-app.git",
-		"directory": "packages/strapi-plugin-sync-shows"
+		"directory": "packages/strapi-plugin-uno"
 	},
 	"license": "MIT",
 	"author": {
@@ -75,8 +75,8 @@
 		"git": false
 	},
 	"strapi": {
-		"name": "sync-shows",
-		"description": "Description of sync-shows plugin",
+		"name": "uno",
+		"description": "Description of uno plugin",
 		"kind": "plugin"
 	}
 }

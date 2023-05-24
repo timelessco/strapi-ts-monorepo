@@ -17,12 +17,12 @@ const config: KnipConfig = {
 				"pg",
 				"@strapi/strapi",
 				"@strapi/plugin-i18n",
-				"strapi-plugin-sync-shows",
+				"strapi-plugin-uno",
 				"webpack",
 			],
 			ignoreBinaries: ["strapi"],
 		},
-		"packages/strapi-plugin-sync-shows": {
+		"packages/strapi-plugin-uno": {
 			entry: [
 				"admin/src/index.tsx!",
 				"server/{index,register,bootstrap,destroy}.ts!",
