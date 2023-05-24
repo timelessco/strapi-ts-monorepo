@@ -52,8 +52,8 @@ After you have set the environmental variables, you can run the project locally
 by
 
 ```shell
-git clone https://github.com/timelessco/strapi-ts-app
-cd strapi-ts-app
+git clone https://github.com/timelessco/strapi-ts-monorepo
+cd strapi-ts-monorepo
 yarn install
 ```
 
