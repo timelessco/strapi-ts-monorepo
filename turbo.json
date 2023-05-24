@@ -1,36 +1,51 @@
 {
 	"$schema": "https://turbo.build/schema.json",
 	"pipeline": {
-		"build:strapi": {
-			"dependsOn": ["lint:eslint", "lint:types"]
+		"dev": {
+			"persistent": true
+		},
+		"build": {},
+		"start": {
+			"persistent": true
 		},
 		"test": {},
+		"clean": {},
+		"//#lint:prettier": {
+			"outputs": [".prettiercache"]
+		},
+		"//#lint:eslint": {
+			"outputs": [".eslintcache"]
+		},
 		"lint:eslint": {
 			"outputs": [".eslintcache"]
 		},
+		"//#lint:types": {},
 		"lint:types": {},
-		"lint:md": {
+		"//#lint:md": {
 			"inputs": ["**/*.md", ".github/**/*.md"]
 		},
-		"lint:knip": {
+		"//#lint:spelling": {},
+		"//#lint:knip": {
 			"inputs": ["src/**/*.{ts,tsx}"]
+		},
+		"//#lint:package-json": {
+			"inputs": ["package.json"]
 		},
 		"lint:package-json": {
 			"inputs": ["package.json"]
 		},
-		"lint:prettier": {
+		"//#format:prettier": {
+			"dependsOn": ["format:eslint", "format:md"],
 			"outputs": [".prettiercache"]
 		},
-		"lint:spelling": {},
+		"//#format:eslint": {
+			"outputs": [".eslintcache"]
+		},
 		"format:eslint": {
 			"outputs": [".eslintcache"]
 		},
-		"format:md": {
+		"//#format:md": {
 			"inputs": ["**/*.md", ".github/**/*.md"]
-		},
-		"format:prettier": {
-			"dependsOn": ["format:eslint", "format:md"],
-			"outputs": [".prettiercache"]
 		}
 	}
 }

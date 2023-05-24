@@ -1,12 +1,12 @@
-<h1 align="center">Strapi TS App</h1>
+<h1 align="center">Strapi TS Monorepo</h1>
 
-<p align="center">Strapi TS App Template</p>
+<p align="center">Strapi TS Monorepo Template</p>
 
 <p align="center">
 	<a href="#contributors" target="_blank">
 <!-- prettier-ignore-start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<img alt="All Contributors: 2" src="https://img.shields.io/badge/all_contributors-2-21bb42.svg" />
+<img alt="All Contributors: 3" src="https://img.shields.io/badge/all_contributors-3-21bb42.svg" />
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- prettier-ignore-end -->
 	</a>
@@ -59,6 +59,7 @@ See [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md), then
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://navinmoorthy.me/"><img src="https://avatars.githubusercontent.com/u/39694575?v=4?s=100" width="100px;" alt="Navin Moorthy"/><br /><sub><b>Navin Moorthy</b></sub></a><br /><a href="https://github.com/timelessco/strapi-ts-app/commits?author=navin-moorthy" title="Code">💻</a> <a href="#a11y-navin-moorthy" title="Accessibility">️️️️♿️</a> <a href="https://github.com/timelessco/strapi-ts-app/commits?author=navin-moorthy" title="Documentation">📖</a> <a href="#design-navin-moorthy" title="Design">🎨</a> <a href="#ideas-navin-moorthy" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-navin-moorthy" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.joshuakgoldberg.com"><img src="https://avatars.githubusercontent.com/u/3335181?v=4?s=100" width="100px;" alt="Josh Goldberg"/><br /><sub><b>Josh Goldberg</b></sub></a><br /><a href="#tool-JoshuaKGoldberg" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/belgattitude"><img src="https://avatars.githubusercontent.com/u/259798?v=4?s=100" width="100px;" alt="Sébastien Vanvelthem"/><br /><sub><b>Sébastien Vanvelthem</b></sub></a><br /><a href="#tool-belgattitude" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>
@@ -71,6 +72,8 @@ See [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md), then
 
 <!-- You can remove this notice if you don't want it 🙂 no worries! -->
 
-> 💙 This package is based on
-> [@JoshuaKGoldberg](https://github.com/JoshuaKGoldberg)'s
-> [template-typescript-node-package](https://github.com/JoshuaKGoldberg/template-typescript-node-package).
+<sub> 💙 This package is based on
+[@JoshuaKGoldberg](https://github.com/JoshuaKGoldberg)'s
+[template-typescript-node-package](https://github.com/JoshuaKGoldberg/template-typescript-node-package)
+and [@belgattitude](https://github.com/belgattitude)'s
+[nextjs-monorepo-example](https://github.com/belgattitude/nextjs-monorepo-example)<sub>

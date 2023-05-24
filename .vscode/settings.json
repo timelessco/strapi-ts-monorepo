@@ -133,10 +133,5 @@
 		"cfml",
 		"HTML (Eex)",
 		"mdx"
-	],
-	"markdown.validate.ignoredLinks": [
-		"#a11y-navin-moorthy",
-		"#design-navin-moorthy",
-		"#ideas-navin-moorthy"
 	]
 }

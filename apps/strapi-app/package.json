@@ -1,0 +1,93 @@
+{
+	"name": "strapi-app",
+	"version": "1.0.1",
+	"private": true,
+	"description": "Strapi App Template",
+	"keywords": [
+		"ts",
+		"app",
+		"production",
+		"template",
+		"strapi"
+	],
+	"homepage": "https://github.com/timelessco/strapi-ts-app",
+	"bugs": {
+		"url": "https://github.com/timelessco/strapi-ts-app/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/timelessco/strapi-ts-app.git",
+		"directory": "apps/strapi-app"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Timeless",
+		"email": "hello@timeless.co",
+		"url": "https://timeless.co/"
+	},
+	"scripts": {
+		"build": "strapi build",
+		"clean": "del-cli dist .cache",
+		"dev": "strapi develop",
+		"dev:strapi-admin": "strapi develop --watch-admin",
+		"format:eslint": "eslint --cache --report-unused-disable-directives --color . --fix",
+		"lint:eslint": "eslint --cache --report-unused-disable-directives --color .",
+		"lint:package-json": "npmPkgJsonLint .",
+		"lint:types": "tsc --noEmit",
+		"start": "strapi start",
+		"strapi": "strapi",
+		"test": "echo \"no test specified\" && exit 0"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"dependencies": {
+		"@strapi/plugin-i18n": "4.10.5",
+		"@strapi/strapi": "4.10.5",
+		"pg": "8.11.0",
+		"strapi-plugin-sync-shows": "workspace:^"
+	},
+	"devDependencies": {
+		"@types/node": "20.2.3",
+		"@typescript-eslint/experimental-utils": "5.59.7",
+		"del-cli": "5.0.0",
+		"eslint": "8.41.0",
+		"eslint-config-canonical": "41.0.4",
+		"eslint-config-prettier": "8.8.0",
+		"eslint-plugin-jsonc": "2.8.0",
+		"jsonc-eslint-parser": "2.3.0",
+		"lint-staged": "13.2.2",
+		"npm-package-json-lint": "6.4.0",
+		"npm-package-json-lint-config-default": "5.0.0",
+		"typescript": "5.0.4"
+	},
+	"engines": {
+		"node": ">=14.19.1 <=18.x.x",
+		"npm": ">=6.0.0"
+	},
+	"release-it": {
+		"git": false,
+		"plugins": {
+			"@release-it/bumper": {
+				"out": {
+					"file": "package.json",
+					"path": [
+						"dependencies.strapi-plugin-sync-shows"
+					]
+				}
+			}
+		}
+	},
+	"strapi": {
+		"uuid": "3823b7ff-5bf2-4b57-9357-62a0211cc9fe"
+	}
+}
