@@ -1,6 +1,6 @@
 {
 	"name": "strapi-ts-monorepo",
-	"version": "1.0.1",
+	"version": "1.0.0",
 	"private": true,
 	"description": "Strapi TS Monorepo Template",
 	"keywords": [
