@@ -20,7 +20,7 @@ jobs:
           # @link https://github.com/actions/checkout#fetch-all-history-for-all-tags-and-branches
           fetch-depth: 0
 
-      - name: 📥 Monorepo install
+      - name: 📥 Prepare package manager
         uses: ./.github/actions/prepare
 
       # @link https://github.com/changesets/action
