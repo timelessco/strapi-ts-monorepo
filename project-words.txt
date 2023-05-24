@@ -8,14 +8,20 @@ ehthumbs
 esbenp
 fbca
 gacp
+gifv
+haml
 ianvs
+ipynb
 Knip
 knip
 kohler
 Kolkata
 lcov
 libc
+mdtxt
+mdwn
 micnncim
+mkdn
 Navin
 navin
 nbproject
@@ -30,6 +36,8 @@ pids
 prefered
 raynigon
 sentryclirc
+styl
+svgz
 syncer
 Sébastien
 timelessco
@@ -40,4 +48,7 @@ TSES
 unpublish
 vivaxy
 vuepress
+wbmp
+webm
+webp
 wscript
