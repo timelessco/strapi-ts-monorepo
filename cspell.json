@@ -31,6 +31,7 @@
 		"public",
 		"CHANGELOG.md",
 		"pnpm-lock.yaml",
+		".yarn",
 		"project-words.txt"
 	]
 }
