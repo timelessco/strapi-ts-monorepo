@@ -36,7 +36,7 @@ Strapi comes with a full featured
 - [knip](https://github.com/webpro/knip)
 - [cspell](https://cspell.org)
 - [npm-package-json-lint](https://npmpackagejsonlint.org/)
-- [release-it](https://github.com/release-it/release-it#readme)
+- [changesets](https://github.com/changesets/changesets)
 - [husky](https://typicode.github.io/husky/#/)
 - [lint-staged](https://github.com/okonet/lint-staged#readme)
 - [commitlint](https://commitlint.js.org/#/)

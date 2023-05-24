@@ -46,7 +46,7 @@ module.exports = {
 	],
 	overrides: [
 		{
-			files: ["./*.js", "./*.cjs", "release-it/**/*.{js,cjs}"],
+			files: ["./*.js", "./*.cjs"],
 			extends: [
 				"canonical",
 				"canonical/node",

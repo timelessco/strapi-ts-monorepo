@@ -315,10 +315,6 @@ package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
-# Release-it
-release-it/remote-commits.json
-release-it/**/*.hbs
-
 # Extras(if any)
 CHANGELOG.md
 schemas.d.ts

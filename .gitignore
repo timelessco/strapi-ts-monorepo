@@ -311,8 +311,5 @@ build
 # Optional cspell cache
 .cspellcache
 
-# Release-it
-release-it/remote-commits.json
-
 # Extras(if any)
 !monorepo.code-workspace

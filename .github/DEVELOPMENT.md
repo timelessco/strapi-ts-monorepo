@@ -43,7 +43,7 @@ your machine:
 ## Configuration
 
 The project uses environmental variables for configuration. You can set the
-environmental variables in a **`.env`** file in the root directory of the
+environmental variables in a **`.env`** file in each of the workspace of the
 project.
 
 ## Installing the dependencies

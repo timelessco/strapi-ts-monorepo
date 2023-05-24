@@ -3,7 +3,6 @@ import { type KnipConfig } from "knip";
 const config: KnipConfig = {
 	workspaces: {
 		".": {
-			entry: "release-it/**/*",
 			ignoreBinaries: ["turbo"],
 		},
 		"apps/strapi-app": {
