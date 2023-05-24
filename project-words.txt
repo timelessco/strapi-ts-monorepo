@@ -6,12 +6,9 @@ contributorsrc
 dbaeumer
 ehthumbs
 esbenp
-execa
 fbca
 gacp
 ianvs
-infile
-inversed
 Knip
 knip
 kohler
@@ -22,6 +19,7 @@ micnncim
 Navin
 navin
 nbproject
+netrc
 nextjs
 njsproj
 noreply
