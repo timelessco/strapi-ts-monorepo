@@ -2,13 +2,13 @@
 	"name": "strapi-plugin-uno",
 	"version": "1.0.1",
 	"description": "This is the description of the plugin.",
-	"homepage": "https://github.com/timelessco/strapi-ts-app",
+	"homepage": "https://github.com/timelessco/strapi-ts-monorepo",
 	"bugs": {
-		"url": "https://github.com/timelessco/strapi-ts-app/issues"
+		"url": "https://github.com/timelessco/strapi-ts-monorepo/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/timelessco/strapi-ts-app.git",
+		"url": "git+https://github.com/timelessco/strapi-ts-monorepo.git",
 		"directory": "packages/strapi-plugin-uno"
 	},
 	"license": "MIT",

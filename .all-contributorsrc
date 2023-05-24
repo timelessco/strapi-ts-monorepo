@@ -28,7 +28,7 @@
 	"contributorsPerLine": 7,
 	"files": ["README.md"],
 	"imageSize": 100,
-	"projectName": "strapi-ts-app",
+	"projectName": "strapi-ts-monorepo",
 	"projectOwner": "timelessco",
 	"repoHost": "https://github.com",
 	"repoType": "github"
