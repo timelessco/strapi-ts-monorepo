@@ -30,7 +30,7 @@ jobs:
         with:
           # publish: yarn release
           cwd: ${{ github.workspace }}
-          title: "[Release] Version packages"
+          title: "chore(release): version packages"
           # Optional, might be used in conjunction with GITHUB_TOKEN to
           # allow running the workflows on a Version package action.
           # Be aware of security implications.
