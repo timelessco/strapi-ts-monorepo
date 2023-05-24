@@ -37,10 +37,11 @@ const commonNodeIgnoredRules = {
  * @type {import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config}
  */
 module.exports = {
+	root: true,
 	ignorePatterns: ["!**/.*"],
 	overrides: [
 		{
-			files: ["*.js", "*.mjs"],
+			files: ["./*.js"],
 			extends: [
 				"canonical",
 				"canonical/node",
@@ -64,12 +65,6 @@ module.exports = {
 					},
 				],
 			},
-			overrides: [
-				{
-					files: ["*.mjs"],
-					extends: ["canonical/module"],
-				},
-			],
 		},
 		{
 			files: ["./*.ts", "config/**/*.ts"],
@@ -139,6 +134,10 @@ module.exports = {
 			parserOptions: {
 				project: "src/admin/tsconfig.json",
 			},
+			rules: {
+				...commonNodeIgnoredRules,
+				...commonTypescriptIgnoredRules,
+			},
 			overrides: [
 				{
 					files: ["*.ts"],
@@ -178,21 +177,6 @@ module.exports = {
 			excludedFiles: [".vscode/**/*.json"],
 			parser: "jsonc-eslint-parser",
 			extends: ["plugin:jsonc/recommended-with-json", "plugin:jsonc/prettier"],
-		},
-		{
-			files: [".vscode/**"],
-			parser: "jsonc-eslint-parser",
-			extends: ["plugin:jsonc/recommended-with-jsonc", "plugin:jsonc/prettier"],
-		},
-		{
-			files: ["*.yaml", "*.yml"],
-			parser: "yaml-eslint-parser",
-			extends: ["plugin:yml/standard", "plugin:yml/prettier"],
-		},
-		{
-			files: ["*.toml"],
-			parser: "toml-eslint-parser",
-			extends: ["plugin:toml/standard"],
 		},
 	],
 };

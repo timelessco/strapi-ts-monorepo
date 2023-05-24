@@ -4,7 +4,7 @@ const {
 	commitPartial,
 	transform,
 	commitGroupsSort,
-} = require("./release-it/writerOptions.js");
+} = require("./release-it/writerOptions.cjs");
 
 module.exports = {
 	hooks: {

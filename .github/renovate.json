@@ -31,10 +31,29 @@
 	"labels": ["Type: Maintenance", ":blue_heart:"],
 	"dependencyDashboardTitle": "Renovate Dependency Updates",
 	"automergeStrategy": "squash",
-	"postUpdateOptions": ["pnpmDedupe"],
+	"postUpdateOptions": ["yarnDedupeHighest"],
 	"commitMessageAction": "⬆️  update",
 	"commitMessageTopic": "{{depName}}",
 	"packageRules": [
+		{
+			"matchPaths": ["package.json"],
+			"matchDepTypes": ["dependencies"],
+			"rangeStrategy": "pin"
+		},
+		{
+			"matchPaths": ["apps/**"],
+			"matchDepTypes": ["dependencies"],
+			"rangeStrategy": "pin"
+		},
+		{
+			"matchPaths": ["packages/**"],
+			"matchDepTypes": ["dependencies"],
+			"rangeStrategy": "replace"
+		},
+		{
+			"matchDepTypes": ["devDependencies"],
+			"rangeStrategy": "auto"
+		},
 		{
 			"matchDatasources": ["npm"],
 			"groupName": "renovate-meta",
