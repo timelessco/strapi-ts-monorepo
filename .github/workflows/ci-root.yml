@@ -1,4 +1,4 @@
-name: CI
+name: CI Root
 
 on:
   pull_request: ~
@@ -18,5 +18,5 @@ jobs:
 
       - name: 🧐 Lint root files
         run:
-          turbo lint:prettier lint:eslint lint:types lint:md lint:knip
+          yarn turbo lint:prettier lint:eslint lint:types lint:md lint:knip
           lint:package-json lint:spelling
