@@ -9,8 +9,8 @@
 			"path": "apps/strapi-app"
 		},
 		{
-			"name": "📦 strapi-plugin-sync-shows",
-			"path": "packages/strapi-plugin-sync-shows"
+			"name": "📦 strapi-plugin-uno",
+			"path": "packages/strapi-plugin-uno"
 		}
 	],
 	"extensions": {
@@ -62,7 +62,7 @@
 		// https://github.com/Microsoft/vscode-eslint#mono-repository-setup
 		"eslint.workingDirectories": [
 			"./apps/strapi-app",
-			"./packages/strapi-plugin-sync-shows"
+			"./packages/strapi-plugin-uno"
 		],
 		"stylelint.enable": true,
 

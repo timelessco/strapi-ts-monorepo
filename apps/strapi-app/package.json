@@ -54,7 +54,7 @@
 		"@strapi/plugin-i18n": "4.10.5",
 		"@strapi/strapi": "4.10.5",
 		"pg": "8.11.0",
-		"strapi-plugin-sync-shows": "workspace:^"
+		"strapi-plugin-uno": "workspace:^"
 	},
 	"devDependencies": {
 		"@types/node": "20.2.3",
@@ -81,7 +81,7 @@
 				"out": {
 					"file": "package.json",
 					"path": [
-						"dependencies.strapi-plugin-sync-shows"
+						"dependencies.strapi-plugin-uno"
 					]
 				}
 			}
