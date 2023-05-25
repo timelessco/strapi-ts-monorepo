@@ -86,7 +86,7 @@
 		"gacp": "3.0.3",
 		"husky": "8.0.3",
 		"jsonc-eslint-parser": "2.3.0",
-		"knip": "2.12.1",
+		"knip": "2.12.2",
 		"lint-staged": "13.2.2",
 		"markdownlint": "0.28.2",
 		"markdownlint-cli": "0.34.0",
@@ -95,7 +95,7 @@
 		"prettier": "2.8.8",
 		"prettier-plugin-packagejson": "2.4.3",
 		"toml-eslint-parser": "0.6.0",
-		"turbo": "1.9.8",
+		"turbo": "1.9.9",
 		"typescript": "5.0.4",
 		"yaml-eslint-parser": "1.2.2"
 	},
