@@ -5,7 +5,7 @@ const config: KnipConfig = {
 		".": {
 			project: ["scripts/**/*.{ts,tsx}", ".changeset/**/*.{js,cjs}"],
 			ignore: [".yarn"],
-			ignoreBinaries: ["turbo", "husky"],
+			ignoreBinaries: ["turbo", "husky", "is-ci"],
 		},
 		"apps/cms-strapi": {
 			entry: "src/index.ts!",
