@@ -6,8 +6,10 @@ done through [atlassian/changesets](https://github.com/atlassian/changesets).
 
 Apps:
 
-- [strapi-app/CHANGELOG.md](apps/strapi-app/CHANGELOG.md)
+- [cms-strapi/CHANGELOG.md](apps/cms-strapi/CHANGELOG.md)
+
+Strapi Plugins:
+
+- [strapi-plugin-uno/CHANGELOG.md](apps/cms-strapi/src/plugins/uno/CHANGELOG.md)
 
 Packages:
-
-- [strapi-plugin-uno/CHANGELOG.md](packages/strapi-plugin-uno/CHANGELOG.md)

@@ -313,3 +313,4 @@ build
 
 # Extras(if any)
 !monorepo.code-workspace
+!apps/cms-strapi/public/robots.txt

@@ -7,6 +7,7 @@ dbaeumer
 ehthumbs
 esbenp
 fbca
+folke
 gacp
 gifv
 haml
@@ -35,16 +36,17 @@ nuxt
 pids
 prefered
 raynigon
+Sébastien
 sentryclirc
 styl
 svgz
 syncer
-Sébastien
+taze
 timelessco
-tobemodified
 Trads
 tsconfigs
 TSES
+tsup
 unpublish
 vivaxy
 vuepress

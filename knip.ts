@@ -3,10 +3,11 @@ import { type KnipConfig } from "knip";
 const config: KnipConfig = {
 	workspaces: {
 		".": {
+			project: ["scripts/**/*.{ts,tsx}", ".changeset/**/*.{js,cjs}"],
 			ignore: [".yarn"],
-			ignoreBinaries: ["turbo"],
+			ignoreBinaries: ["turbo", "husky", "is-ci"],
 		},
-		"apps/strapi-app": {
+		"apps/cms-strapi": {
 			entry: "src/index.ts!",
 			project: ["src/**/*.{ts,tsx}!"],
 			ignore: [
@@ -22,14 +23,12 @@ const config: KnipConfig = {
 			],
 			ignoreBinaries: ["strapi"],
 		},
-		"packages/strapi-plugin-uno": {
+		"apps/cms-strapi/src/plugins/uno": {
+			project: ["admin/**/*.{ts,tsx}!", "server/**/*.ts!"],
 			entry: [
-				"admin/src/index.tsx!",
+				"admin/src/index.ts!",
 				"server/{index,register,bootstrap,destroy}.ts!",
 			],
-			project: ["admin/**/*.{ts,tsx}!", "server/**/*.ts!"],
-			ignore: ["**/getTrad.ts"],
-			ignoreDependencies: ["@strapi/design-system", "prop-types"],
 		},
 	},
 };

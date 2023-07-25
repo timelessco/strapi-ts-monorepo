@@ -2,13 +2,21 @@
 	"$schema": "https://turbo.build/schema.json",
 	"pipeline": {
 		"dev": {
+			"cache": false,
+			"persistent": true
+		},
+		"dev:admin": {
+			"cache": false,
 			"persistent": true
 		},
 		"build": {},
 		"start": {
+			"dependsOn": ["build"],
+			"cache": false,
 			"persistent": true
 		},
 		"test": {},
+		"//#clean": {},
 		"clean": {},
 		"//#lint:prettier": {
 			"outputs": [".prettiercache"]
@@ -29,9 +37,6 @@
 			"inputs": ["src/**/*.{ts,tsx}"]
 		},
 		"//#lint:package-json": {
-			"inputs": ["package.json"]
-		},
-		"lint:package-json": {
 			"inputs": ["package.json"]
 		},
 		"//#format:prettier": {

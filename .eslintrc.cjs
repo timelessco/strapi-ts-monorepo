@@ -1,7 +1,7 @@
 const commonIgnoredRules = {
-	"no-console": ["error", { allow: ["warn", "error"] }],
+	"no-console": "off",
+	"no-warning-comments": "off",
 	"no-param-reassign": "off",
-	"arrow-body-style": ["error", "as-needed"],
 	"import/no-named-as-default": "off",
 	"import/no-unassigned-import": ["error", { allow: ["**/*.css"] }],
 	"import/no-extraneous-dependencies": "off",
@@ -39,14 +39,25 @@ const commonNodeIgnoredRules = {
 module.exports = {
 	root: true,
 	ignorePatterns: [
+		// no ignore
 		"!**/.*",
 		"!monorepo.code-workspace",
+		//  Node.js
+		".npmrc",
+		".nvmrc",
+		// Lock files
+		"package-lock.json",
+		"yarn.lock",
+		"pnpm-lock.yaml",
+		// Auto generated typescript files from strapi
+		"*.md",
+		// Extras(if any)
 		"apps/**/*",
 		"packages/**/*",
 	],
 	overrides: [
 		{
-			files: ["./*.js", "./*.cjs"],
+			files: ["./*.js", "./*.cjs", "./.changeset/*.cjs"],
 			extends: [
 				"canonical",
 				"canonical/node",
@@ -78,7 +89,7 @@ module.exports = {
 			],
 		},
 		{
-			files: ["./*.ts"],
+			files: ["./*.ts", "./scripts/*.ts"],
 			extends: [
 				"canonical",
 				"canonical/node",
@@ -104,13 +115,13 @@ module.exports = {
 			},
 		},
 		{
-			files: ["*.json", ".all-contributorsrc"],
+			files: ["*.json", ".all-contributorsrc", ".prettierrc"],
 			excludedFiles: [".vscode/**/*.json"],
 			parser: "jsonc-eslint-parser",
 			extends: ["plugin:jsonc/recommended-with-json", "plugin:jsonc/prettier"],
 		},
 		{
-			files: [".vscode/**", "monorepo.code-workspace"],
+			files: ["*.jsonc", ".vscode/**", "monorepo.code-workspace"],
 			parser: "jsonc-eslint-parser",
 			extends: ["plugin:jsonc/recommended-with-jsonc", "plugin:jsonc/prettier"],
 		},

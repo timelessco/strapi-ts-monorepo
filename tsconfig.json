@@ -12,13 +12,26 @@
 		"module": "ESNext",
 		"moduleResolution": "node",
 		"noEmit": true,
+		"verbatimModuleSyntax": true,
+		"allowUnreachableCode": false,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+		"useUnknownInCatchVariables": true,
 		"noUnusedParameters": true,
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"strict": true,
-		"target": "ES5",
+		"target": "ESNext",
 		"typeRoots": ["./node_modules/@types", "@types"]
 	},
 	"include": ["./**/*"],
-	"exclude": ["**/.*/", "node_modules", "apps", "packages"]
+	"exclude": ["**/.*/", "node_modules", "apps", "packages"],
+	"ts-node": {
+		"transpileOnly": true,
+		"files": true,
+		"esm": true,
+		"experimentalSpecifierResolution": "node",
+		"pretty": true,
+		"experimentalResolver": true
+	}
 }

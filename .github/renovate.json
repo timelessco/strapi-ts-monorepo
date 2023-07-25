@@ -1,5 +1,4 @@
 {
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": [
 		":automergeMinor",
 		":automergePr",
@@ -36,17 +35,35 @@
 	"commitMessageTopic": "{{depName}}",
 	"packageRules": [
 		{
-			"matchPaths": ["package.json"],
+			"matchFileNames": ["package.json"],
 			"matchDepTypes": ["dependencies"],
 			"rangeStrategy": "pin"
 		},
 		{
-			"matchPaths": ["apps/**"],
+			"matchFileNames": ["apps/cms-strapi/src/plugins/**"],
+			"groupName": "Strapi Plugin dependencies",
+			"description": "Group all strapi plugin dependencies in the app directory",
+			"matchDepTypes": ["dependencies"],
+			"rangeStrategy": "replace"
+		},
+		{
+			"matchFileNames": ["apps/cms-strapi/src/plugins/**"],
+			"groupName": "Strapi Plugin ignored dependencies ",
+			"description": "Group all strapi plugin dependencies in the app directory to be ignored",
+			"matchPackageNames": ["react-router-dom", "styled-components"],
+			"enabled": false
+		},
+		{
+			"matchFileNames": ["app/**"],
+			"groupName": "App dependencies",
+			"description": "Group all dependencies from the app directory",
 			"matchDepTypes": ["dependencies"],
 			"rangeStrategy": "pin"
 		},
 		{
-			"matchPaths": ["packages/**"],
+			"matchFileNames": ["packages/**"],
+			"groupName": "Packages dependencies",
+			"description": "Group all dependencies from the packages directory",
 			"matchDepTypes": ["dependencies"],
 			"rangeStrategy": "replace"
 		},
@@ -113,10 +130,12 @@
 			"prPriority": 3
 		},
 		{
+			"groupName": "Github Actions",
 			"matchManagers": ["github-actions"],
 			"rangeStrategy": "replace",
 			"semanticCommitType": "ci",
 			"semanticCommitScope": "ci-deps"
 		}
-	]
+	],
+	"ignoreDeps": []
 }

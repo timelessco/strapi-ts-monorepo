@@ -1,0 +1,9 @@
+@hostname = http://{{$dotenv HOST}}
+@port = {{$dotenv PORT}}
+@baseURL = {{hostname}}:{{port}}
+
+### Example
+# Get all the users
+
+GET {{baseURL}}/users?populate=*
+Authorization: Bearer {{$dotenv API_TOKEN}}

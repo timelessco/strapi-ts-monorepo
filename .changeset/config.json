@@ -1,9 +1,6 @@
 {
-	"$schema": "https://unpkg.com/@changesets/config@2.2.0/schema.json",
-	"changelog": [
-		"@changesets/changelog-github",
-		{ "repo": "timelessco/strapi-ts-monorepo" }
-	],
+	"$schema": "https://unpkg.com/@changesets/config@2.3.1/schema.json",
+	"changelog": ["./changelog.cjs", { "repo": "timelessco/strapi-ts-monorepo" }],
 	"privatePackages": { "version": true, "tag": true },
 	"commit": true,
 	"linked": [],
