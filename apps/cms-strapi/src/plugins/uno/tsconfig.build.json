@@ -1,0 +1,36 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		"rootDir": "./",
+		"outDir": "dist",
+		"target": "ESNext",
+		"lib": ["dom", "dom.iterable", "esnext", "esnext.asynciterable"],
+		"typeRoots": ["./node_modules/@types", "@types"],
+		"moduleResolution": "NodeNext",
+		"module": "commonjs",
+		"strict": true,
+		"downlevelIteration": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		"jsx": "react",
+		"allowUnreachableCode": false,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+		"useUnknownInCatchVariables": true,
+		"noUnusedParameters": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"allowJs": true
+	},
+	"include": [
+		"./server/**/*",
+		"./admin/**/*",
+		"./utils/**/*",
+		"./strapi-server.*",
+		"./strapi-admin.*",
+		"custom.d.ts",
+		"./types/**/*.ts"
+	],
+	"exclude": ["**/node_modules/**/*", "**/dist/**/*", "./package.json"]
+}

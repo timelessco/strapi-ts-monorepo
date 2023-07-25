@@ -1,16 +1,17 @@
-name: ReleaseOrVersionPR
+name: Release Or Version PR
 
 on:
   push:
     branches: [main]
 
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   release:
     # Basic security: the release job can only be executed from this repo and from the main branch (not a remote thing)
-    if:
-      ${{ github.repository == 'timelessco/strapi-ts-monorepo' &&
+    if: ${{ github.repository == 'timelessco/strapi-ts-monorepo' &&
       contains('refs/heads/main',github.ref)}}
-    name: Release and changelog
+    name: Version and create changelog
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -24,13 +25,13 @@ jobs:
         uses: ./.github/actions/prepare
 
       # @link https://github.com/changesets/action
-      - name: 🦋 Create Release Pull Request or Publish to npm
+      - name: 🦋 Create or Update Version
         id: changesets
         uses: changesets/action@v1
         with:
-          # publish: yarn release
           cwd: ${{ github.workspace }}
-          title: "chore(release): version packages"
+          title: "chore(release): 🎉 version packages"
+          # publish: yarn release
           # Optional, might be used in conjunction with GITHUB_TOKEN to
           # allow running the workflows on a Version package action.
           # Be aware of security implications.
@@ -41,3 +42,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Uncomment and add secrets to allow publishing
           # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish & Release
+        if: contains(github.event.head_commit.message, '🎉 version packages')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: yarn release

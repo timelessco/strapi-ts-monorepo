@@ -5,16 +5,17 @@
 			"path": "."
 		},
 		{
-			"name": "🍂 strapi-app",
-			"path": "apps/strapi-app"
+			"name": "🍂 cms-strapi",
+			"path": "apps/cms-strapi"
 		},
 		{
-			"name": "📦 strapi-plugin-uno",
-			"path": "packages/strapi-plugin-uno"
+			"name": "📦 cms-strapi-plugin-uno",
+			"path": "apps/cms-strapi/src/plugins/uno"
 		}
 	],
 	"extensions": {
 		"recommendations": [
+			"folke.vscode-monorepo-workspace",
 			"esbenp.prettier-vscode",
 			"dbaeumer.vscode-eslint",
 			"DavidAnson.vscode-markdownlint",
@@ -35,6 +36,7 @@
 		"typescript.enablePromptUseWorkspaceTsdk": true,
 
 		"files.associations": {
+			"package.json": "json",
 			"*.svg": "html",
 			".env.*": "dotenv",
 			"*.json": "jsonc",
@@ -61,8 +63,9 @@
 		],
 		// https://github.com/Microsoft/vscode-eslint#mono-repository-setup
 		"eslint.workingDirectories": [
-			"./apps/strapi-app",
-			"./packages/strapi-plugin-uno"
+			{ "pattern": "apps/*/" },
+			{ "pattern": "apps/cms-strapi/src/plugins/*/" },
+			{ "pattern": "packages/*/" }
 		],
 		"stylelint.enable": true,
 
@@ -110,8 +113,8 @@
 		"stylelint.validate": ["css", "scss"],
 
 		// Markdown
-		"markdown.validate.enabled": true,
-		"markdown.experimental.editor.pasteLinks.enabled": true,
+		"markdown.validate.enabled": false,
+		"markdown.editor.pasteUrlAsFormattedLink.enabled": true,
 		"[markdown]": {
 			"editor.quickSuggestions": {
 				"comments": "on",
@@ -119,6 +122,16 @@
 				"other": "on"
 			}
 		},
+		// Takes the config from .markdownlint.json but needed for inner folders
+		"markdownlint.config": {
+			"first-line-h1": false,
+			"no-inline-html": false
+		},
+		"markdownlint.ignore": [
+			"**/node_modules/**",
+			"apps/cms-strapi/.cache/**",
+			"**/CHANGELOG.md"
+		],
 
 		// Docker
 		"[dockerfile]": {

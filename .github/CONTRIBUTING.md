@@ -118,23 +118,15 @@ within 24 hours - it was likely an oversight on our end!
 [1]: ./DEVELOPMENT.md
 [2]: ./CODE_OF_CONDUCT.md
 [3]: https://github.com/timelessco/strapi-ts-monorepo/issues/new/choose
-[4]:
-	https://github.com/timelessco/strapi-ts-monorepo/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+prs%22
-[5]:
-	https://github.com/timelessco/strapi-ts-monorepo/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+prs%22+label%3A%22good+first+issue%22+no%3Aassignee
+[4]: https://github.com/timelessco/strapi-ts-monorepo/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+prs%22
+[5]: https://github.com/timelessco/strapi-ts-monorepo/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+prs%22+label%3A%22good+first+issue%22+no%3Aassignee
 [6]: #reporting-issues
 [7]: https://github.com/conventional-changelog/commitlint
-[8]:
-	https://github.com/timelessco/strapi-ts-monorepo/pulls?q=is%3Apr+is%3Amerged+-label%3Adependencies+
-[9]:
-	https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request#converting-a-pull-request-to-a-draft
-[10]:
-	https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews#re-requesting-a-review
+[8]: https://github.com/timelessco/strapi-ts-monorepo/pulls?q=is%3Apr+is%3Amerged+-label%3Adependencies+
+[9]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request#converting-a-pull-request-to-a-draft
+[10]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews#re-requesting-a-review
 [11]: ../README.md#contributors
 [12]: https://allcontributors.org/docs/en/emoji-key "Allcontributors emoji key"
-[13]:
-	https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/about-status-checks
-[14]:
-	https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request
-[15]:
-	https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#resolving-conversations
+[13]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/about-status-checks
+[14]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request
+[15]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#resolving-conversations

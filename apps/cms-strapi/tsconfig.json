@@ -1,0 +1,20 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "@strapi/typescript-utils/tsconfigs/server",
+	"compilerOptions": {
+		"rootDir": "./",
+		"outDir": "dist",
+		"strictNullChecks": true
+	},
+	"include": ["./**/*", "src/**/*.json"],
+	"exclude": [
+		"node_modules/",
+		"build/",
+		"dist/",
+		".cache/",
+		".tmp/",
+		"**/*.test.*",
+		"src/admin/",
+		"src/plugins/**"
+	]
+}

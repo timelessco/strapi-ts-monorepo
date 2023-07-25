@@ -22,26 +22,26 @@
 
 ## Introduction
 
-Strapi comes with a full featured
-[Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html)
-(CLI) which lets you scaffold and manage your project in seconds.
+This monorepo project features a comprehensive Command Line Interface (CLI) & editor tools that lets you get started with your projects in seconds. Together with PostgreSQL and TypeScript, and an array of incredible tools like Yarn, Husky, Changesets and etc., ensures a simplified, and better codebase management experience.
 
-- [strapi](https://strapi.io/)
+- [strapi](https://github.com/strapi/strapi)
 - [pg](https://www.postgresql.org/)
-- [typeScript](https://www.typescriptlang.org/)
-- [yarn](https://yarnpkg.com/)
-- [eslint](https://eslint.org/)
-- [prettier](https://prettier.io/)
-- [markdownlint](https://github.com/DavidAnson/markdownlint)
-- [knip](https://github.com/webpro/knip)
-- [cspell](https://cspell.org)
-- [npm-package-json-lint](https://npmpackagejsonlint.org/)
+- [typescript](https://github.com/microsoft/TypeScript)
+- [yarn](https://github.com/yarnpkg/berry)
+- [husky](https://github.com/typicode/husky)
 - [changesets](https://github.com/changesets/changesets)
-- [husky](https://typicode.github.io/husky/#/)
-- [lint-staged](https://github.com/okonet/lint-staged#readme)
-- [commitlint](https://commitlint.js.org/#/)
-- [gacp](https://github.com/vivaxy/gacp#readme)
+- [eslint](https://github.com/eslint/eslint)
+- [prettier](https://github.com/prettier/prettier)
+- [markdownlint](https://github.com/DavidAnson/markdownlint)
+- [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)
+- [knip](https://github.com/webpro/knip)
+- [cspell](https://github.com/streetsidesoftware/cspell)
+- [npm-package-json-lint](https://github.com/tclindner/npm-package-json-lint)
+- [lint-staged](https://github.com/okonet/lint-staged)
+- [gacp](https://github.com/vivaxy/gacp)
+- [commitlint](https://github.com/conventional-changelog/commitlint)
 - [all-contributors](https://github.com/all-contributors/all-contributors)
+- [npm-check-updates](https://github.com/raineorshine/npm-check-updates)
 
 ## Development
 
